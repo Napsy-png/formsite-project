@@ -21,9 +21,8 @@ public class FormsiteApplication {
 	@Bean
 	public CommandLineRunner LoadDatabase(QuestionRepository qrepo) {
 		return args ->{
-			log.info("Adding questions");
-			qrepo.save(new Question("Minkä arvosanan antaisit asiakaspalvelutaidoillesi?"));
-			qrepo.save(new Question("Kuinka järjestelmällinen olet?"));
+			log.info("Initializing");
+			
 			
 			
 			
