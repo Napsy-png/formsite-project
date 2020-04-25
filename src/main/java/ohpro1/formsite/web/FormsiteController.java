@@ -1,18 +1,16 @@
 package ohpro1.formsite.web;
 
 import java.util.List;
+
+
 import java.util.Optional;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import ohpro1.formsite.domain.Answer;
-import ohpro1.formsite.domain.AnswerRepository;
 import ohpro1.formsite.domain.Question;
 import ohpro1.formsite.domain.QuestionRepository;
 
@@ -24,9 +22,15 @@ public class FormsiteController {
 		this.qrepo = qrepo;
 		
 	}
+	
+	@GetMapping("/")
+	List<Question> all(){
+		return qrepo.findAll();
+	}
+	
 
 	@GetMapping("/questions")
-	List<Question> all(){
+	List<Question> all2(){
 		return qrepo.findAll();
 	}
 	
@@ -53,10 +57,7 @@ public class FormsiteController {
 	        return qrepo.save(newQuestion);
 		});
 		
-	@DeleteMapping("/questions/{id}")
-		void deleteQuestion(@PathVariable Long id) {
-			qrepo.deleteById(id);
-	}
+	
 	
 	
 }
