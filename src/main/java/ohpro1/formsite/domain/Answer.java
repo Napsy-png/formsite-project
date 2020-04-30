@@ -30,7 +30,7 @@ public class Answer {
 			this.id = id;
 		}
 
-		public String getAnswerst() {
+		public String getAnswers() {
 			return answers;
 		}
 
