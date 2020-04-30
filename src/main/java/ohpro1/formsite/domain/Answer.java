@@ -11,15 +11,15 @@ import lombok.Data;
 @Entity
 public class Answer {
 	private @Id @GeneratedValue(strategy=GenerationType.AUTO) Long id;
-	private String answers;
+	private String acontent;
 	
 	public Answer() {
 		super();
 	}
 	
-		public Answer(String answers){
+		public Answer(String acontent){
 			super();
-			this.answers = answers;
+			this.acontent = acontent;
 		}
 
 		public Long getId() {
@@ -30,12 +30,12 @@ public class Answer {
 			this.id = id;
 		}
 
-		public String getAnswers() {
-			return answers;
+		public String getAcontent() {
+			return acontent;
 		}
 
-		public void setAnswers(String answers) {
-			this.answers = answers;
+		public void setAcontent(String content) {
+			this.acontent = content;
 		}
 	
 
