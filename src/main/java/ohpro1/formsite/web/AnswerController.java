@@ -24,8 +24,8 @@ public class AnswerController {
 	}
 	
 	@PostMapping("/answers")
-	Answer newAnswer(@RequestBody Answer newAnswer) {
-		return arepo.save(newAnswer);
+	List<Answer> newAnswers(@RequestBody List<Answer> newAnswers) {
+		return arepo.saveAll(newAnswers);
 
 	}
 }
