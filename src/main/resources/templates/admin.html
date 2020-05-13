@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Admin Page</title>
+</head>
+<body>
+
+	<h1>Questions</h1>
+	<table>
+	<tr>
+		<th>Question</th>
+	</tr>
+	<tr th:each = "question : ${Questions}">
+		<td th:text="${question.content}"> </td>
+		<td><a th:href="@{/delete/{id}(id=${question.id})}">Delete</a></td>
+	</tr>
+	</table>
+	<br>
+	<button><a href= "/addQuestion">Add Questions</a></button>
+
+</body>
+</html>
