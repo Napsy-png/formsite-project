@@ -36,10 +36,6 @@ public class WebSecConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/admin").hasRole("ADMIN")
 		.and().formLogin();
 	}
-	public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedMethods( "GET", "PUT", "POST", "DELETE");
-    }
 	
 
 }
