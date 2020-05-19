@@ -13,6 +13,10 @@ public class Person {
 	private @Id @GeneratedValue(strategy=GenerationType.AUTO) Long id;
 	private String name;
 
+//lisätty parametritön konstruktori
+public Person(){
+	super();
+}
 
 public Person(String name){
 	super();
@@ -38,6 +42,5 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-
 
 }
